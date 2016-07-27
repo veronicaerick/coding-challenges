@@ -1,4 +1,4 @@
-# Given a list of words, return a list of words that are anagrams of eachother
+a# Given a list of words, return a list of words that are anagrams of eachother
 
 def anagram_lists(words):
     word_dict = {}
@@ -16,7 +16,7 @@ def anagram_lists(words):
     for s_w, w in word_dict.iteritems():
         results.append(w)
 
-# given a list of ints, determine whether a pair sums up to S 
+# given a list of ints, determine whether a pair sums up to S
 
 def sum_to_S(lst, S):
     int_dict = {}
@@ -37,7 +37,7 @@ def three_sum_to_S(lst, S):
     # set keys and vals for dict, int_dict[num] = [i]
     for i, num in enumerate(lst):
         int_dict.setdefault(num, []).append(i)
-    #  iterate through, keep track of two, compare two items to 
+    #  iterate through, keep track of two, compare two items to
     # see if S-diff is in the set. If it is, there are 3 items that
     # sum to S, return those
     for i in range(len(lst)):
@@ -81,10 +81,10 @@ def binary_search(val):
         guessed = (lower_than - higher_than) / 2 + higher_than
         if val < guessed:
             lower_than = guess
-        
+
         elif val > guessed:
             higher_than = guess
-        
+
 
     return guesses
 
@@ -116,7 +116,7 @@ def find_kth_2_sorted_arrays(lst1, lst2):
     extend.sorted_list(lst1[indexA:])
     extend.sorted_list(lst2[indexB:])
 
-    for i in range(len(sorted_list)):
+
 
 def find_permutations(string):
     if len(string) == 1:
@@ -126,7 +126,7 @@ def find_permutations(string):
     permutations = find_permutations(string[1:])
     first_letter = string[0]
     results = []
-    # iterate thru, moving the place we are inserting each char around 
+    # iterate thru, moving the place we are inserting each char around
     # per iteration
     for perm in permutations:
         for i in range(len(perm) + 1):
@@ -169,7 +169,7 @@ def second_largest(lst):
             second_max = num
 
 def get_subsets(elements):
-    
+
     if len(elements) > 0:
         result = []
         head = elements[0]
@@ -182,7 +182,7 @@ def powerset(seq):
     result = []
     if len(seq) <=1:
         return None
-    else: 
+    else:
         for i in powerset(seq[1:]):
             result.append(seq[0] + item)
             result.append(item)
@@ -316,7 +316,7 @@ def reverse_string(string):
     for i in range(len(string), 0, -1):
         out += string[i-1]
 
-    return out 
+    return out
 
 def reverse_ll(head):
     out_head = None
@@ -335,8 +335,8 @@ def reverse_lL_in_place(lst):
     while current != None:
         next = current.next
         current.next = prev
-        prev = current 
-        current = next 
+        prev = current
+        current = next
     lst.head = prev
 
 def make_anagram_dict(words):
@@ -358,8 +358,8 @@ def most_common_anagrams(wordlist):
         number_amagrams = len(all_anas_dict[sorted_word])
         if number_amagrams > highest_num_anagrams:
             highest_num_anagrams = number_amagrams
-            most_anagrams = w 
-        return most anagrams 
+            most_anagrams = w
+        return most anagrams
 
 def reverse(s):
     current_token = ''
@@ -373,7 +373,7 @@ def reverse(s):
                 tokens.append(current_token)
                 current_token = ''
                 in_space = True
-        else: 
+        else:
             if in_space:
                 tokens.append(current_token)
                 current_token = ''
@@ -393,7 +393,7 @@ def substring_within_string(string,substring):
             if start == len(substring):
                 return i
 
-# 
+#
 def stock_picker(lst):
     max_profit = 0
 
@@ -405,17 +405,9 @@ def stock_picker(lst):
 
     return max_profit
 
+def is_perm(s1, s2):
+    sorted_s1 = sorted(s1)
+    sorted_s2 = sorted(s2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    for i in range(len(sorted_s1)):
+        if (sorted_s1[0] != sorted_s2[0]:

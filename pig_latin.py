@@ -1,12 +1,12 @@
 def pig_latin(string):
+    pl_words = ""
     vowels = ["a", "e", "i", "o", "u"]
     words = string.split()
 
-    pig_latin_words = []
     for word in words:
         if word[0] in vowels:
-            pig_latin_words.append(word[1:] + "yay" + word[0])
+            pl_words.append(word[1:] + word[0] + "yay")
         else:
-           pig_latin_words.append(word + "ay")
+            pl_words.append(word + "ay")
 
-    return " ".join(pig_latin_words)
+    return pl_words
