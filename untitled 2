@@ -1,0 +1,16 @@
+def get_max_stock(prices):
+    max_profit = 0
+
+    for outer_time in xrange(len(prices)):
+        for inner_time in x range(len(prices)):
+            earlier_time = min(outer_time, inner_time)
+            later_time = max(outer_time, inner_time)
+
+            earlier_price = prices[earlier_time]
+            later_price = prices[later_time]
+
+            potential_profit = later_price - earlier_price
+
+            max_profit = max(max_profit, potential_profit)
+
+    return max_profit
