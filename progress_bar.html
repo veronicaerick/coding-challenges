@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+#bar {
+    width: 100%;
+    position: relative;;
+    height: 30px;
+    background-color: grey;
+}
+
+#myBar {
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    background-color: skyblue;
+}
+
+#label {
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+</style>
+<body>
+
+<div id="bar">
+    <div id="myBar">
+    <div id="label">10%</div>
+    </div>
+    <div id="myBar2">  </div>
+</div>
+
+<button onClick="move()">See</button>
+<button onClick= "stopColor()">Stop this!</button>
+
+<script type="text/javascript">
+
+function move() {
+    var bar1 = document.getElementById('myBar');
+    var bar2 = document.getElementById('myBar2')
+    var width = 30;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            function frame2() {
+                width++;
+                bar2.style.width = width + '%'
+            }
+            clearInterval(id);
+        }
+        else {
+            width++;
+            barish.style.width = width + '%';
+
+        document.getElementById('label').innerHTML = width * 1 + '%';
+
+        }
+    }
+}
+
+var myVar = setInterval(function(){ setColor() }, 300);
+ 
+function setColor() {
+  var x = document.body;
+  x.style.backgroundColor = x.style.backgroundColor == "skyblue" ? "white" : "skyblue";
+}
+ 
+function stopColor() {
+  clearInterval(myVar);
+}
+
+</script>
+
+</body>
