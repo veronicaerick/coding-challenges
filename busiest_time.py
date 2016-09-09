@@ -33,13 +33,17 @@ def find_busiest_period(data):
     # see if current time is same as last time
         if (i < n-1 and data[i].time == data[i+1].time):
             continue 
-
+    # if the count is larger than max, reassign count to max
         if count > max_count:
             max_count = count
+            # assign start of busiest time to current time
             max_period[0] = data[i].time
+            # if current place is smaller than the length of the data up to second to las
             if (i < n-1):
+                # assign end time to the next time
                 max_period[1] = data[i + 1].time
             else:
+                # otherwise assign end time to current times
                 max_period[1] = data[i].time
 
     return max_period

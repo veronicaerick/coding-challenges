@@ -1,15 +1,15 @@
 
 def timePlanner(timesA, timesB, dur):
-  A = sorted(timesA)
-  B = sorted(timesB)
+  timesA = sorted(timesA)
+  timesB = sorted(timesB)
   i = 0 
   j = 0
-  while (i < len(A) and  j < len(B)):
-    d = len( set(range(A[i][0], A[i][1])).intersection(range(B[j][0], B[j][1])) )
+  while (i < len(timesA) and  j < len(timesB)):
+    d = len(set(range(timesA[i][0], timesA[i][1])).intersection(range(timesB[j][0], timesB[j][1])) )
     if d >= dur:
       return True
     
-    if A[i][1] < B[j][1]:
+    if timesA[i][1] < timesB[j][1]:
       i += 1
     else:
       j += 1

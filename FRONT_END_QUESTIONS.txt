@@ -1,0 +1,23 @@
+
+
+Explain the box-model and how it affects various CSS properties.
+
+What is the difference between display: block, display: inline and display: inline-block?
+
+What is a normal HTTP request made up of?
+
+List some common HTTP response codes and describe what they mean.
+
+Describe some of the steps you might take to ensure your website is accessible.
+
+What is BEM and explain why using something like it could be useful in your CSS?
+
+Explain the concept of closure and what it is used for.
+
+What does the $ represent when using jQuery?
+
+Explain the this keyword and it’s behaviour in JS.
+
+What is the difference between the DOMContentLoaded and window.load events?
+
+Give a brief overview of any JavaScript frameworks that you know of or have used, providing examples of the kind of projects that they could be best suited towards.
